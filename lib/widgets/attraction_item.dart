@@ -41,7 +41,7 @@ class AttractionWidget extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  bottom: 20,
+                  bottom: 10,
                   right: 10,
                   child: Container(
                       width: 220,
