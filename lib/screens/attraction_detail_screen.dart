@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 
-class MapScreen extends StatefulWidget {
-  @override
-  _MapScreenState createState() => _MapScreenState();
-}
+class AttractionDetailScreen extends StatelessWidget {
+  static const routeName = '/attraction_detail';
 
-class _MapScreenState extends State<MapScreen> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
