@@ -41,5 +41,5 @@ app.*.symbols
 app.*.map.json
 
 #Google maps api
-ios/Runner/Base.Iproj/AppDetegate.swift
 android/app/src/main/AndroidManifest.xml
+ios/Runner/AppDelegate.swift
