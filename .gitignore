@@ -39,3 +39,7 @@ app.*.symbols
 
 # Obfuscation related
 app.*.map.json
+
+#Google maps api
+ios/Runner/Base.Iproj/AppDetegate.swift
+android/app/src/main/AndroidManifest.xml

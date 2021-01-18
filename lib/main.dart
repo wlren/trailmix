@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Trail Mix',
       theme: ThemeData(
         primarySwatch: Colors.green,
+        accentColor: Colors.green[50],
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MapScreen(),
