@@ -6,10 +6,12 @@ class AttractionItem {
   final String description;
   final String imageUrl;
   final LatLng location;
+  final String type;
 
   const AttractionItem(
       {@required this.description,
       @required this.titleID,
       @required this.imageUrl,
-      @required this.location});
+      @required this.location,
+      @required this.type});
 }
