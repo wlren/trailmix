@@ -37,11 +37,13 @@ class _MapScreenState extends State<MapScreen> {
       // the trick is to remove the marker (by id)
       // and add it again at the updated location
       _markers.removeWhere((m) => m.markerId.value == 'sourcePin');
-      _markers.add(Marker(
+      _markers.add(
+        Marker(
           markerId: MarkerId('sourcePin'),
           position: pinPosition, // updated position
-          icon:
-              BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueBlue)));
+          icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueBlue),
+        ),
+      );
     });
   }
 
@@ -66,11 +68,7 @@ class _MapScreenState extends State<MapScreen> {
     });
   }
 
-  static final CameraPosition _myLocation = CameraPosition(
-    target: LatLng(0, 0),
-  );
-
-  void setInitialLocation() async {
+  Future<void> setInitialLocation() async {
     // set the initial location by pulling the user's
     // current location from the location's getLocation()
     currentLocation = await location.getLocation();
@@ -109,7 +107,8 @@ class _MapScreenState extends State<MapScreen> {
         body: new Stack(
           children: [
             GoogleMap(
-              onTap: (LatLng) => this.setState(() {
+              myLocationEnabled: true,
+              onTap: (_) => this.setState(() {
                 _cardVisable = false;
               }),
               onMapCreated: (GoogleMapController controller) {
