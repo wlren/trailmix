@@ -15,10 +15,17 @@ class AttractionOverviewScreen extends StatelessWidget {
       drawer: AppDrawer(),
       body: ListView.builder(
         itemCount: attractionData.length,
-        itemBuilder: (ctx, index) => AttractionWidget(
-            title: attractionData[index].titleID,
-            imageUrl: attractionData[index].imageUrl,
-            description: attractionData[index].description),
+        itemBuilder: (ctx, index) => Column(
+          children: [
+            AttractionWidget(
+                title: attractionData[index].titleID,
+                imageUrl: attractionData[index].imageUrl,
+                description: attractionData[index].description),
+            SizedBox(
+              height: 4,
+            ),
+          ],
+        ),
       ),
     );
   }
