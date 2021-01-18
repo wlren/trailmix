@@ -4,6 +4,7 @@ import '../screens/map_screen.dart';
 import '../screens/attraction_detail_screen.dart';
 import '../screens/attractions_overview_screen.dart';
 import '../screens/trail_tips_screen.dart';
+import '../widgets/attraction_item.dart';
 
 class AppDrawer extends StatelessWidget {
   @override

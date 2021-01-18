@@ -7,8 +7,7 @@ const attractionData = const [
   AttractionItem(
       description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      titleID: "Hello World",
-      imageUrl:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg/220px-Ash_Tree_-_geograph.org.uk_-_590710.jpg',
-      location: LatLng(0, 0))
+      titleID: "Aerie tower",
+      imageUrl: 'https://www.locomole.com/wp-content/uploads/hs8f93cf41.png',
+      location: LatLng(1.4464592, 103.725776))
 ];

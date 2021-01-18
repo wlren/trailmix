@@ -3,7 +3,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import '../data/attraction_data.dart';
 import '../models/attraction.dart';
-import '../models/attraction.dart';
+import '../widgets/attraction_item.dart';
 import '../widgets/app_drawer.dart';
 
 class MapScreen extends StatefulWidget {
@@ -71,20 +71,13 @@ class _MapScreenState extends State<MapScreen> {
                   .toSet(),
             ),
             if (_cardVisable)
-              new Container(
-                alignment: Alignment.topCenter,
-                padding: new EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * .58,
-                    right: 20.0,
-                    left: 20.0),
-                child: new Container(
-                  height: 200.0,
-                  width: MediaQuery.of(context).size.width,
-                  child: new Card(
-                    color: Colors.white,
-                    elevation: 4.0,
-                    child: Text(cardAttraction.titleID),
-                  ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(
+                    0, MediaQuery.of(context).size.height - 300, 0, 0),
+                child: new AttractionWidget(
+                  title: cardAttraction.titleID,
+                  imageUrl: cardAttraction.imageUrl,
+                  description: cardAttraction.description,
                 ),
               ),
           ],

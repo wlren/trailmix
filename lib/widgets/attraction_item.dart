@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import '../screens/attraction_detail_screen.dart';
 
-class AttractionItem extends StatelessWidget {
+class AttractionWidget extends StatelessWidget {
   final String title;
   final String imageUrl;
   final String description;
 
-  AttractionItem(
+  AttractionWidget(
       {@required this.description,
       @required this.imageUrl,
       @required this.title});
@@ -44,25 +44,34 @@ class AttractionItem extends StatelessWidget {
                   bottom: 20,
                   right: 10,
                   child: Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.white),
-                      color: Colors.green[900],
-                    ),
-                    width: 220,
-                    padding: EdgeInsets.symmetric(
-                      vertical: 5,
-                      horizontal: 20,
-                    ),
-                    child: Text(
-                      title,
-                      style: TextStyle(
-                        fontSize: 26,
-                        color: Colors.white,
+                      width: 220,
+                      padding: EdgeInsets.symmetric(
+                        vertical: 5,
+                        horizontal: 20,
                       ),
-                      softWrap: true,
-                      overflow: TextOverflow.fade,
-                    ),
-                  ),
+                      child: Stack(
+                        children: [
+                          Text(
+                            title,
+                            style: TextStyle(
+                              fontSize: 26,
+                              foreground: Paint()
+                                ..style = PaintingStyle.stroke
+                                ..strokeWidth = 6
+                                ..color = Colors.black,
+                            ),
+                          ),
+                          Text(
+                            title,
+                            style: TextStyle(
+                              fontSize: 26,
+                              color: Colors.white,
+                            ),
+                            softWrap: true,
+                            overflow: TextOverflow.fade,
+                          ),
+                        ],
+                      )),
                 ),
               ],
             ),
