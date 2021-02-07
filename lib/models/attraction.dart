@@ -6,12 +6,12 @@ class AttractionItem {
   final String description;
   final String imagePath;
   final LatLng location;
-  final String markerPath;
+  final IconData markerIcon;
 
   const AttractionItem(
       {@required this.description,
       @required this.titleID,
       @required this.imagePath,
       @required this.location,
-      @required this.markerPath});
+      @required this.markerIcon});
 }
