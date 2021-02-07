@@ -7,11 +7,13 @@ class AttractionItem {
   final String imagePath;
   final LatLng location;
   final IconData markerIcon;
+  final Color iconColor;
 
   const AttractionItem(
       {@required this.description,
       @required this.titleID,
       @required this.imagePath,
       @required this.location,
-      @required this.markerIcon});
+      @required this.markerIcon,
+      this.iconColor});
 }

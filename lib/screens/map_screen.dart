@@ -1,12 +1,10 @@
 import 'dart:async';
-import 'dart:typed_data';
-import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import '../data/attraction_data.dart';
+import '../data/facilities_data.dart';
 import '../models/attraction.dart';
 import '../widgets/attraction_item.dart';
 import '../widgets/app_drawer.dart';
@@ -75,14 +73,14 @@ class _MapScreenState extends State<MapScreen> {
     });
   }
 
-  Future<Set<Marker>> getattractionData() async {
+  Future<Set<Marker>> getAttractionData() async {
     List<Marker> markers = <Marker>[];
     for (final attraction in attractionData) {
-      // final Uint8List markerIcon =
-      //     await getBytesFromAsset(attraction.markerPath, 80);
-      // final icon = BitmapDescriptor.fromBytes(markerIcon);
       final icon = await markerGenerator.createBitmapDescriptorFromIconData(
-          attraction.markerIcon, Colors.black, Colors.black, Colors.white);
+          attraction.markerIcon,
+          Colors.white,
+          Colors.black,
+          attraction.iconColor);
       final marker = Marker(
           markerId: MarkerId(attraction.titleID),
           icon: icon,
@@ -91,11 +89,22 @@ class _MapScreenState extends State<MapScreen> {
 
       markers.add(marker);
     }
+    for (final facilities in facilitiesData) {
+      final icon = await markerGenerator.createBitmapDescriptorFromIconData(
+          facilities.markerIcon, Colors.black, Colors.black, Colors.white);
+      final marker = Marker(
+          markerId: MarkerId(facilities.titleID),
+          icon: icon,
+          position: facilities.location,
+          infoWindow: InfoWindow(title: facilities.titleID));
+      markers.add(marker);
+    }
+
     return markers.toSet();
   }
 
   void initData() async {
-    final mark = await getattractionData();
+    final mark = await getAttractionData();
     _createPolylines();
     setState(() {
       _markers = mark;

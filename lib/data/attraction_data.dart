@@ -6,71 +6,30 @@ const attractionData = const [
   AttractionItem(
       description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      titleID: "MB 1",
-      imagePath: 'assets/images/monke.jpeg',
-      location: LatLng(1.447502, 103.729588),
-      markerIcon: Icons.house_siding),
-  AttractionItem(
-      description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      titleID: "Main Bird Observational Hide 1A",
-      imagePath: 'assets/images/monke.jpeg',
-      location: LatLng(1.4463, 103.7276),
-      markerIcon: Icons.house_siding),
-  AttractionItem(
-      description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      titleID: "Sungei Buloh Wetland Reserve Wetland Centre",
-      imagePath: 'assets/images/monke.jpeg',
-      location: LatLng(1.4462584551145121, 103.72936764717024),
-      markerIcon: Icons.festival),
-  AttractionItem(
-      description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      titleID: "MB 4",
-      imagePath: 'assets/images/monke.jpeg',
-      location: LatLng(1.447003, 103.730061),
-      markerIcon: Icons.house_siding),
-  AttractionItem(
-      description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      titleID: "MB 3",
-      imagePath: 'assets/images/monke.jpeg',
-      location: LatLng(1.447366, 103.730379),
-      markerIcon: Icons.house_siding),
-  AttractionItem(
-      description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      titleID: "MB 2",
-      imagePath: 'assets/images/monke.jpeg',
-      location: LatLng(1.447745, 103.729994),
-      markerIcon: Icons.house_siding),
-  AttractionItem(
-      description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       titleID: "Attap Chee Nipah",
       imagePath: 'assets/images/monke.jpeg',
       location: LatLng(1.447731, 103.729761),
-      markerIcon: Icons.park),
+      markerIcon: Icons.park,
+      iconColor: Colors.green),
   AttractionItem(
-      description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      titleID: "Broadwalk Entrance",
+      description: "Crocodiles something Something",
+      titleID: "Crocodiles",
       imagePath: 'assets/images/monke.jpeg',
-      location: LatLng(1.447113, 103.729005),
-      markerIcon: Icons.trip_origin),
+      location: LatLng(1.4471631665181335, 103.72848762602433),
+      markerIcon: Icons.anchor,
+      iconColor: Colors.blue),
   AttractionItem(
-      description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      titleID: "Entrance By Bus",
+      description: "Mudskippers, Mud Crabs",
+      titleID: "Coastal Path",
       imagePath: 'assets/images/monke.jpeg',
-      location: LatLng(1.438790, 103.735371),
-      markerIcon: Icons.directions_bus),
+      location: LatLng(1.4474379694923059, 103.73024010139373),
+      markerIcon: Icons.set_meal_rounded,
+      iconColor: Colors.blue),
   AttractionItem(
-      description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      titleID: "Wetland Reserve Centre",
+      description: "MOAR PLANTS",
+      titleID: "Rhizophora",
       imagePath: 'assets/images/monke.jpeg',
-      location: LatLng(1.4404140668514125, 103.73527939457156),
-      markerIcon: Icons.festival),
+      location: LatLng(1.4469290886454362, 103.72980797661354),
+      markerIcon: Icons.spa,
+      iconColor: Colors.green),
 ];
