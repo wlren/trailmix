@@ -11,6 +11,7 @@ import '../models/attraction.dart';
 import '../widgets/attraction_item.dart';
 import '../widgets/app_drawer.dart';
 import '../helpers/marker_icon_generator.dart';
+import '../data/polyline_coord.dart';
 
 class MapScreen extends StatefulWidget {
   static const routeName = '/';
@@ -19,6 +20,46 @@ class MapScreen extends StatefulWidget {
 }
 
 class _MapScreenState extends State<MapScreen> {
+  Map<PolylineId, Polyline> polylines = {};
+
+  void _createPolylines() {
+    PolylineId id = PolylineId('poly');
+    Polyline polyline = Polyline(
+      polylineId: id,
+      color: Colors.teal,
+      points: polylineCoordinates,
+      width: 3,
+    );
+    polylines[id] = polyline;
+
+    PolylineId id2 = PolylineId('poly2');
+    Polyline polyline2 = Polyline(
+      polylineId: id2,
+      color: Colors.teal,
+      points: polylineCoordinates2,
+      width: 3,
+    );
+    polylines[id2] = polyline2;
+
+    PolylineId id3 = PolylineId('poly3');
+    Polyline polyline3 = Polyline(
+      polylineId: id3,
+      color: Colors.teal,
+      points: polylineCoordinates3,
+      width: 3,
+    );
+    polylines[id3] = polyline3;
+
+    PolylineId id4 = PolylineId('poly4');
+    Polyline polyline4 = Polyline(
+      polylineId: id4,
+      color: Colors.teal,
+      points: polylineCoordinates4,
+      width: 3,
+    );
+    polylines[id4] = polyline4;
+  }
+
   Completer<GoogleMapController> _controller = Completer();
   final LatLng _center = const LatLng(1.4466672, 103.7290178);
   OverlayEntry overlayEntry;
@@ -55,6 +96,7 @@ class _MapScreenState extends State<MapScreen> {
 
   void initData() async {
     final mark = await getattractionData();
+    _createPolylines();
     setState(() {
       _markers = mark;
     });
@@ -77,13 +119,14 @@ class _MapScreenState extends State<MapScreen> {
         body: new Stack(
           children: [
             GoogleMap(
-              mapType: MapType.hybrid,
+              polylines: Set<Polyline>.of(polylines.values),
+              mapType: MapType.satellite,
               myLocationEnabled: true,
               onTap: (_) => this.setState(() {
                 _cardVisable = false;
               }),
               initialCameraPosition: CameraPosition(
-                target: _center,
+                target: _selectedLocation == null ? _center : _selectedLocation,
                 zoom: 17.5,
               ),
               markers: _markers,
