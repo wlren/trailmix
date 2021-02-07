@@ -70,6 +70,7 @@ class _MapScreenState extends State<MapScreen> {
         body: new Stack(
           children: [
             GoogleMap(
+              mapType: MapType.hybrid,
               myLocationEnabled: true,
               myLocationButtonEnabled: true,
               onTap: (_) => this.setState(() {
@@ -87,7 +88,7 @@ class _MapScreenState extends State<MapScreen> {
                     0, MediaQuery.of(context).size.height - 300, 0, 0),
                 child: new AttractionWidget(
                   title: cardAttraction.titleID,
-                  imageUrl: cardAttraction.imageUrl,
+                  imagePath: cardAttraction.imagePath,
                   description: cardAttraction.description,
                 ),
               ),

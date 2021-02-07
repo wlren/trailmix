@@ -19,7 +19,7 @@ class AttractionOverviewScreen extends StatelessWidget {
           children: [
             AttractionWidget(
                 title: attractionData[index].titleID,
-                imageUrl: attractionData[index].imageUrl,
+                imagePath: attractionData[index].imagePath,
                 description: attractionData[index].description),
             SizedBox(
               height: 4,

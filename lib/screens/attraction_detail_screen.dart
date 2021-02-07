@@ -32,8 +32,8 @@ class AttractionDetailScreen extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(15),
                 child: Center(
-                    child: Image.network(
-                  selectedAttraction.imageUrl,
+                    child: Image.asset(
+                  selectedAttraction.imagePath,
                   width: double.infinity,
                   fit: BoxFit.cover,
                 )),

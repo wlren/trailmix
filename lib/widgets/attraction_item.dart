@@ -4,12 +4,12 @@ import '../screens/attraction_detail_screen.dart';
 
 class AttractionWidget extends StatelessWidget {
   final String title;
-  final String imageUrl;
+  final String imagePath;
   final String description;
 
   AttractionWidget(
       {@required this.description,
-      @required this.imageUrl,
+      @required this.imagePath,
       @required this.title});
 
   void _selectAttraction(BuildContext context) {
@@ -31,8 +31,8 @@ class AttractionWidget extends StatelessWidget {
             children: [
               ClipRRect(
                 borderRadius: BorderRadius.circular(15),
-                child: Image.network(
-                  imageUrl,
+                child: Image.asset(
+                  imagePath,
                   height: MediaQuery.of(context).size.height * 0.18,
                   width: double.infinity,
                   fit: BoxFit.cover,
