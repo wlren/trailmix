@@ -1,8 +1,10 @@
 import 'dart:async';
+import 'dart:typed_data';
+import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:location/location.dart';
 
 import '../data/attraction_data.dart';
 import '../models/attraction.dart';
@@ -17,13 +19,11 @@ class MapScreen extends StatefulWidget {
 
 class _MapScreenState extends State<MapScreen> {
   Completer<GoogleMapController> _controller = Completer();
-  final LatLng _center = const LatLng(1.4466672, 103.7275178);
+  final LatLng _center = const LatLng(1.4466672, 103.7290178);
   OverlayEntry overlayEntry;
   bool _cardVisable = false;
   Set<Marker> _markers;
   AttractionItem cardAttraction;
-  LocationData currentLocation;
-  Location location;
 
   void _displayInfo(AttractionItem attraction) {
     setState(() {
@@ -32,17 +32,44 @@ class _MapScreenState extends State<MapScreen> {
     });
   }
 
+  Future<Uint8List> getBytesFromAsset(String path, int width) async {
+    ByteData data = await rootBundle.load(path);
+    ui.Codec codec = await ui.instantiateImageCodec(data.buffer.asUint8List(),
+        targetWidth: width);
+    ui.FrameInfo fi = await codec.getNextFrame();
+    return (await fi.image.toByteData(format: ui.ImageByteFormat.png))
+        .buffer
+        .asUint8List();
+  }
+
+  Future<Set<Marker>> getattractionData() async {
+    List<Marker> markers = <Marker>[];
+    for (final attraction in attractionData) {
+      final Uint8List markerIcon =
+          await getBytesFromAsset(attraction.markerPath, 100);
+      final icon = BitmapDescriptor.fromBytes(markerIcon);
+      final marker = Marker(
+          markerId: MarkerId(attraction.titleID),
+          icon: icon,
+          position: attraction.location,
+          onTap: () => _displayInfo(attraction));
+
+      markers.add(marker);
+    }
+    return markers.toSet();
+  }
+
+  void initData() async {
+    final mark = await getattractionData();
+    setState(() {
+      _markers = mark;
+    });
+  }
+
   @override
-  void initState() {
+  initState() {
     super.initState();
-    _markers = attractionData
-        .map((attraction) => Marker(
-              markerId: MarkerId(attraction.titleID),
-              icon: BitmapDescriptor.defaultMarker,
-              position: attraction.location,
-              onTap: () => _displayInfo(attraction),
-            ))
-        .toSet();
+    initData();
   }
 
   @override
@@ -62,7 +89,7 @@ class _MapScreenState extends State<MapScreen> {
               }),
               initialCameraPosition: CameraPosition(
                 target: _center,
-                zoom: 16.2,
+                zoom: 17.5,
               ),
               markers: _markers,
             ),
