@@ -74,6 +74,7 @@ class _MapScreenState extends State<MapScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final LatLng _selectedLocation = ModalRoute.of(context).settings.arguments;
     return Scaffold(
         appBar: AppBar(
           title: const Text("Sungei Buloh Map"),
