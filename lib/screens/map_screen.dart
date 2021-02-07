@@ -18,12 +18,9 @@ class MapScreen extends StatefulWidget {
 class _MapScreenState extends State<MapScreen> {
   Completer<GoogleMapController> _controller = Completer();
   final LatLng _center = const LatLng(1.4466672, 103.7275178);
-  OverlayEntry overlayEntry;
   bool _cardVisable = false;
   Set<Marker> _markers;
   AttractionItem cardAttraction;
-  LocationData currentLocation;
-  Location location;
 
   void _displayInfo(AttractionItem attraction) {
     setState(() {
@@ -47,6 +44,7 @@ class _MapScreenState extends State<MapScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final LatLng _selectedLocation = ModalRoute.of(context).settings.arguments;
     return Scaffold(
         appBar: AppBar(
           title: const Text("Sungei Buloh Map"),
@@ -61,7 +59,7 @@ class _MapScreenState extends State<MapScreen> {
                 _cardVisable = false;
               }),
               initialCameraPosition: CameraPosition(
-                target: _center,
+                target: _selectedLocation == null ? _center : _selectedLocation,
                 zoom: 16.2,
               ),
               markers: _markers,
