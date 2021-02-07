@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:location/location.dart';
 
 import '../data/attraction_data.dart';
 import '../models/attraction.dart';
@@ -15,12 +16,14 @@ class MapScreen extends StatefulWidget {
 }
 
 class _MapScreenState extends State<MapScreen> {
+  Completer<GoogleMapController> _controller = Completer();
   final LatLng _center = const LatLng(1.4466672, 103.7275178);
+  OverlayEntry overlayEntry;
   bool _cardVisable = false;
   Set<Marker> _markers;
   AttractionItem cardAttraction;
-
-  // Set<BitmapDescriptor> _icons;
+  LocationData currentLocation;
+  Location location;
 
   void _displayInfo(AttractionItem attraction) {
     setState(() {
@@ -29,35 +32,17 @@ class _MapScreenState extends State<MapScreen> {
     });
   }
 
-  Future<Set<Marker>> getattractionData() async {
-    List<Marker> markers = <Marker>[];
-    for (final attraction in attractionData) {
-      final icon = await BitmapDescriptor.fromAssetImage(
-          ImageConfiguration(size: Size(12, 12)), 'asset/hut.png');
-      final marker = Marker(
-          markerId: MarkerId(attraction.titleID),
-          icon: icon,
-          position: attraction.location,
-          onTap: () => _displayInfo(attraction));
-
-      markers.add(marker);
-    }
-    return markers.toSet();
-  }
-
-  void initData() async {
-    // final mark = await getattractionData();
-    final icon = await BitmapDescriptor.fromAssetImage(
-        ImageConfiguration(size: Size(12, 12)), 'asset/hut.png');
-    setState(() {
-      // _markers = mark;
-    });
-  }
-
   @override
-  initState() {
+  void initState() {
     super.initState();
-    initData();
+    _markers = attractionData
+        .map((attraction) => Marker(
+              markerId: MarkerId(attraction.titleID),
+              icon: BitmapDescriptor.defaultMarker,
+              position: attraction.location,
+              onTap: () => _displayInfo(attraction),
+            ))
+        .toSet();
   }
 
   @override
@@ -72,7 +57,6 @@ class _MapScreenState extends State<MapScreen> {
             GoogleMap(
               mapType: MapType.hybrid,
               myLocationEnabled: true,
-              myLocationButtonEnabled: true,
               onTap: (_) => this.setState(() {
                 _cardVisable = false;
               }),
