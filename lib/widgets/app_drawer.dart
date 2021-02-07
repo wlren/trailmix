@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../screens/general_info_screen.dart';
 import '../screens/map_screen.dart';
-import '../screens/attraction_detail_screen.dart';
 import '../screens/attractions_overview_screen.dart';
 import '../screens/trail_tips_screen.dart';
-import '../widgets/attraction_item.dart';
+import '../screens/whats_next_screen.dart';
 
 class AppDrawer extends StatelessWidget {
   @override
@@ -15,6 +15,17 @@ class AppDrawer extends StatelessWidget {
           AppBar(
             title: const Text("Trail Mix"),
             automaticallyImplyLeading: false,
+          ),
+          const Divider(),
+          ListTile(
+            leading: const Icon(
+              Icons.info,
+            ),
+            title: const Text('General Info'),
+            onTap: () {
+              Navigator.of(context)
+                  .pushReplacementNamed(GeneralInfoScreen.routeName);
+            },
           ),
           const Divider(),
           ListTile(
@@ -42,6 +53,15 @@ class AppDrawer extends StatelessWidget {
             onTap: () {
               Navigator.of(context)
                   .pushReplacementNamed(TrailTipsScreen.routeName);
+            },
+          ),
+          const Divider(),
+          ListTile(
+            leading: Icon(Icons.favorite_outline_rounded),
+            title: const Text('What\'s Next?'),
+            onTap: () {
+              Navigator.of(context)
+                  .pushReplacementNamed(WhatsNextScreen.routeName);
             },
           ),
           const Divider(),

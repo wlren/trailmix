@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:trailmix/screens/whats_next_screen.dart';
 
 import './screens/map_screen.dart';
 import './screens/attraction_detail_screen.dart';
 import './screens/attractions_overview_screen.dart';
 import './screens/trail_tips_screen.dart';
+import './screens/general_info_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,6 +28,8 @@ class MyApp extends StatelessWidget {
         AttractionDetailScreen.routeName: (ctx) => AttractionDetailScreen(),
         AttractionOverviewScreen.routeName: (ctx) => AttractionOverviewScreen(),
         TrailTipsScreen.routeName: (ctx) => TrailTipsScreen(),
+        WhatsNextScreen.routeName: (ctx) => WhatsNextScreen(),
+        GeneralInfoScreen.routeName: (ctx) => GeneralInfoScreen(),
       },
     );
   }

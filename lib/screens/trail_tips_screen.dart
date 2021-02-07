@@ -48,7 +48,10 @@ class TrailTipsScreen extends StatelessWidget {
                     leading: DoList[index].icons,
                     title: Text(DoList[index].title),
                     children: [
-                      Text(DoList[index].description),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(DoList[index].description),
+                      ),
                     ],
                   ),
                 );
@@ -88,7 +91,10 @@ class TrailTipsScreen extends StatelessWidget {
                     leading: DoNotList[index].icons,
                     title: Text(DoNotList[index].title),
                     children: [
-                      Text(DoList[index].description),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(DoList[index].description),
+                      ),
                     ],
                   ),
                 );
