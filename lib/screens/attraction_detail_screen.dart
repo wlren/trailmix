@@ -75,10 +75,7 @@ class AttractionDetailScreen extends StatelessWidget {
                       child: Text(
                         selectedAttraction.description,
                         textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontFamily: 'Dosis',
-                            fontSize: 22),
+                        style: TextStyle(color: Colors.black, fontSize: 22),
                       ),
                     ),
                     RaisedButton(
@@ -91,7 +88,7 @@ class AttractionDetailScreen extends StatelessWidget {
                       },
                       child: const Text(
                         'Go to map',
-                        style: TextStyle(fontFamily: 'Dosis', fontSize: 24),
+                        style: TextStyle(fontSize: 24),
                       ),
                     ),
                   ],
