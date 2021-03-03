@@ -93,7 +93,7 @@ class TrailTipsScreen extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text(DoList[index].description),
+                        child: Text(DoNotList[index].description),
                       ),
                     ],
                   ),
