@@ -52,10 +52,10 @@ class AttractionDetailScreen extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 20,
+            height: MediaQuery.of(context).size.height * 0.05,
           ),
           Container(
-            height: MediaQuery.of(context).size.height * 0.45,
+            height: MediaQuery.of(context).size.height * 0.50,
             child: Card(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15),
@@ -66,6 +66,7 @@ class AttractionDetailScreen extends StatelessWidget {
                     ListTile(
                       leading: Icon(Icons.arrow_right),
                       title: const Text('About',
+                          textAlign: TextAlign.left,
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 22)),
                     ),
@@ -73,7 +74,11 @@ class AttractionDetailScreen extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
                         selectedAttraction.description,
-                        style: TextStyle(color: Colors.black, fontSize: 18),
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'Dosis',
+                            fontSize: 22),
                       ),
                     ),
                     RaisedButton(
@@ -86,7 +91,7 @@ class AttractionDetailScreen extends StatelessWidget {
                       },
                       child: const Text(
                         'Go to map',
-                        style: TextStyle(fontSize: 24),
+                        style: TextStyle(fontFamily: 'Dosis', fontSize: 24),
                       ),
                     ),
                   ],

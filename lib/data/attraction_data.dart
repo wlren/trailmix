@@ -17,7 +17,7 @@ const attractionData = const [
       description:
           "Crocodiles do not chew their food. Instead they use their powerful jaws to bite down on their pray and perform a spinning maneuver." +
               "known as the 'Death Roll' to tear off chunks of meat",
-      titleID: "Croc''n' Roll",
+      titleID: "Croc 'n' Roll",
       imagePath: 'assets/images/BridgeCroc.JPG',
       location: LatLng(1.4471631665181335, 103.72848762602433),
       markerIcon: Icons.anchor,

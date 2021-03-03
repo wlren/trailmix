@@ -50,7 +50,12 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
-
+  fonts:
+    - family: Dosis
+      fonts:
+        - asset: assets/fonts/Dosis-Medium.ttf
+        - asset: assets/fonts/Dosis-Bold.ttf
+          weight: 500
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
