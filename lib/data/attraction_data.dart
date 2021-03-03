@@ -5,16 +5,20 @@ import '../models/attraction.dart';
 const attractionData = const [
   AttractionItem(
       description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      titleID: "Attap Chee Nipah",
-      imagePath: 'assets/images/monke.jpeg',
+          "The Attap Chee Nippah palm produce sweet, jelly-like seeds which are common in Singapore desserts.\n" +
+              "The leaves can be used for huts, umbrellas and even bags, while their sap can be fermented into an alcoholic drink.\n" +
+              "Their sap is also known to be a favourite snack for civets.",
+      titleID: "Edible Plants?!?!",
+      imagePath: 'assets/images/AttapCheeNipah.jpg',
       location: LatLng(1.447731, 103.729761),
       markerIcon: Icons.park,
       iconColor: Colors.green),
   AttractionItem(
-      description: "Crocodiles something Something",
-      titleID: "Crocodiles",
-      imagePath: 'assets/images/monke.jpeg',
+      description:
+          "Crocodiles do not chew their food. Instead they use their powerful jaws to bite down on their pray and perform a spinning maneuver." +
+              "known as the 'Death Roll' to tear off chunks of meat",
+      titleID: "Croc 'n' Roll",
+      imagePath: 'assets/images/BridgeCroc.JPG',
       location: LatLng(1.4471631665181335, 103.72848762602433),
       markerIcon: Icons.anchor,
       iconColor: Colors.blue),

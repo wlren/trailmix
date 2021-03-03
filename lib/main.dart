@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Trail Mix',
       theme: ThemeData(
+        fontFamily: 'Dosis',
         primarySwatch: Colors.green,
         accentColor: Colors.green[50],
         visualDensity: VisualDensity.adaptivePlatformDensity,
