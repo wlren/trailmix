@@ -29,12 +29,27 @@ dependencies:
   flutter_polyline_points: ^0.2.4
   geolocator: ^5.3.1
   url_launcher: ^5.7.10
+  
 
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.8.1
+  flutter_native_splash: ^0.3.2
+
+flutter_native_splash:
+  color: '#ffffff'
+  image: assets/icon/splash_icon.pngflutter pub run flutter_native_splash:create
+
+  ios: false
+
+
+flutter_icons:
+  android: true
+  ios: false
+  image_path: "assets/icon/icon.jpg"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

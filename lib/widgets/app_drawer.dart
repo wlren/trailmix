@@ -39,7 +39,7 @@ class AppDrawer extends StatelessWidget {
           ),
           const Divider(),
           ListTile(
-            leading: Icon(Icons.emoji_nature_outlined),
+            leading: const Icon(Icons.emoji_nature_outlined),
             title: const Text('Attractions'),
             onTap: () {
               Navigator.of(context)
@@ -48,7 +48,7 @@ class AppDrawer extends StatelessWidget {
           ),
           const Divider(),
           ListTile(
-            leading: Icon(Icons.contact_support),
+            leading: const Icon(Icons.contact_support),
             title: const Text('Trail Tips'),
             onTap: () {
               Navigator.of(context)
@@ -57,7 +57,7 @@ class AppDrawer extends StatelessWidget {
           ),
           const Divider(),
           ListTile(
-            leading: Icon(Icons.favorite_outline_rounded),
+            leading: const Icon(Icons.favorite_outline_rounded),
             title: const Text('What\'s Next?'),
             onTap: () {
               Navigator.of(context)
