@@ -23,17 +23,28 @@ const attractionData = const [
       markerIcon: Icons.anchor,
       iconColor: Colors.blue),
   AttractionItem(
-      description: "Mudskippers, Mud Crabs",
-      titleID: "Coastal Path",
-      imagePath: 'assets/images/monke.jpeg',
+      description:
+          "Did you know? Mud Lobsters dig up huge mud mounds (up to 2m) and many other animals use it for their homes too. Their digging also helps to keep the mangrove mud fresh, recycling nutrients and allowing oxygen to reenter the mud.",
+      titleID: "Muddy Business",
+      imagePath: 'assets/images/Mudskipper.jpg',
       location: LatLng(1.4474379694923059, 103.73024010139373),
       markerIcon: Icons.set_meal_rounded,
       iconColor: Colors.blue),
   AttractionItem(
-      description: "MOAR PLANTS",
-      titleID: "Rhizophora",
-      imagePath: 'assets/images/monke.jpeg',
+      description: "...",
+      titleID: "Know Your Roots",
+      imagePath: 'assets/images/Mangrove_4.JPG',
       location: LatLng(1.4469290886454362, 103.72980797661354),
       markerIcon: Icons.spa,
       iconColor: Colors.green),
+  AttractionItem(
+      description:
+          "Come in and learn more about the Wetlands before going out to explore.\n\n" +
+              "Look up! Big groups of flying foxes are commonly seen hanging from the roofs. They have an excellent sense of sight and smell to locate fruits.\n\n" +
+              "Monitor lizards are a common sight in our ponds. Look out for their tongue. They have a keen sense of smell, using their tongue to “taste” the air While commonly seen on land or in water, did you know that they can climb trees too?",
+      titleID: "Sungei Buloh Wetland Reserve Wetland Centre",
+      imagePath: 'assets/images/WetlandCentre.jpeg',
+      location: LatLng(1.4462584551145121, 103.72936764717024),
+      markerIcon: Icons.festival,
+      iconColor: Colors.black),
 ];

@@ -20,13 +20,6 @@ const facilitiesData = const [
   AttractionItem(
       description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      titleID: "Sungei Buloh Wetland Reserve Wetland Centre",
-      imagePath: 'assets/images/monke.jpeg',
-      location: LatLng(1.4462584551145121, 103.72936764717024),
-      markerIcon: Icons.festival),
-  AttractionItem(
-      description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       titleID: "MB 4",
       imagePath: 'assets/images/monke.jpeg',
       location: LatLng(1.447003, 103.730061),
