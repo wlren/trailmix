@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 import '../data/attraction_data.dart';
 import '../data/facilities_data.dart';
@@ -105,6 +106,7 @@ class _MapScreenState extends State<MapScreen> {
 
   void initData() async {
     final mark = await getAttractionData();
+    await Permission.locationWhenInUse.request();
     _createPolylines();
     setState(() {
       _markers = mark;
