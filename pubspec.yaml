@@ -42,7 +42,6 @@ dev_dependencies:
 flutter_native_splash:
   color: '#ffffff'
   image: assets/icon/splash_icon.pngflutter pub run flutter_native_splash:create
-
   ios: false
 
 

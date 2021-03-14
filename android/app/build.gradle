@@ -43,7 +43,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.trailmix_geq14a"
+        applicationId "com.weilin.trailmix_geq14a"
         minSdkVersion 16
         targetSdkVersion 29
         versionCode flutterVersionCode.toInteger()

@@ -1,4 +1,4 @@
-package com.example.trailmix_geq14a
+package com.weilin.trailmix_geq14a
 
 import io.flutter.embedding.android.FlutterActivity
 
