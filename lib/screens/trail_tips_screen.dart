@@ -18,7 +18,7 @@ class TrailTipsScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
             child: Container(
-              child: Text(
+              child: const Text(
                 "DO'S",
                 textScaleFactor: 2,
                 textAlign: TextAlign.center,
@@ -61,7 +61,7 @@ class TrailTipsScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
             child: Container(
-              child: Text(
+              child: const Text(
                 "DON'TS",
                 textScaleFactor: 2,
                 textAlign: TextAlign.center,

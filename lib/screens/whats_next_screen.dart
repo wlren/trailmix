@@ -18,7 +18,7 @@ class WhatsNextScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("What's Next?"),
+        title: const Text("What's Next?"),
       ),
       drawer: AppDrawer(),
       body: SingleChildScrollView(
@@ -28,7 +28,7 @@ class WhatsNextScreen extends StatelessWidget {
               margin: const EdgeInsets.all(5),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text(
+                child: const Text(
                   "Enjoyed yourself in Sungei Buloh? Here's more activities for you to try!",
                   style: TextStyle(
                     fontSize: 18,
@@ -53,11 +53,11 @@ class WhatsNextScreen extends StatelessWidget {
                     ),
                   ),
                   ExpansionTile(
-                    title: Text("Coast to Coast Trail!"),
+                    title: const Text("Coast to Coast Trail!"),
                     children: [
-                      Text(
+                      const Text(
                           "Visit the Coast-to-Coast Trail for a curated walking experience across the island!"),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       InkWell(
@@ -72,7 +72,7 @@ class WhatsNextScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Card(
@@ -93,11 +93,11 @@ class WhatsNextScreen extends StatelessWidget {
                     ),
                   ),
                   ExpansionTile(
-                    title: Text("World Migratory Bird Day"),
+                    title: const Text("World Migratory Bird Day"),
                     children: [
-                      Text(
+                      const Text(
                           "World Bird Migratory Day falls on the second Saturday of May. Sungei Buloh Wetland Reserve is an important pitstop for the migratory birds as part of the East Australasian Flyway Partnership. Come down to the main hut and try spotting some of these birds."),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       InkWell(

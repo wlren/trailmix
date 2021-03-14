@@ -8,7 +8,7 @@ class GeneralInfoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("General Information"),
+        title: const Text("General Information"),
       ),
       drawer: AppDrawer(),
       body: Center(

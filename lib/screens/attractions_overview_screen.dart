@@ -21,7 +21,7 @@ class AttractionOverviewScreen extends StatelessWidget {
                 title: attractionData[index].titleID,
                 imagePath: attractionData[index].imagePath,
                 description: attractionData[index].description),
-            SizedBox(
+            const SizedBox(
               height: 4,
             ),
           ],

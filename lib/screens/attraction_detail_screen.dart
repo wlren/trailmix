@@ -9,6 +9,7 @@ class AttractionDetailScreen extends StatelessWidget {
   static const routeName = '/attraction_detail';
 
   Widget build(BuildContext context) {
+    var statusBarHeight = MediaQuery.of(context).padding.top;
     final titleID = ModalRoute.of(context).settings.arguments as String;
     final selectedAttraction = attractionData
         .firstWhere((attraction) => attraction.titleID == titleID);
@@ -22,7 +23,8 @@ class AttractionDetailScreen extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            height: MediaQuery.of(context).size.height * 0.35,
+            height:
+                (MediaQuery.of(context).size.height - statusBarHeight) * 0.35,
             width: double.infinity,
             child: Card(
               elevation: 4.0,
@@ -52,10 +54,12 @@ class AttractionDetailScreen extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.05,
+            height:
+                (MediaQuery.of(context).size.height - statusBarHeight) * 0.05,
           ),
           Container(
-            height: MediaQuery.of(context).size.height * 0.50,
+            height:
+                (MediaQuery.of(context).size.height - statusBarHeight) * 0.50,
             child: Card(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15),
