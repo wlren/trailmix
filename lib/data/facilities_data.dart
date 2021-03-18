@@ -13,13 +13,6 @@ const facilitiesData = const [
   AttractionItem(
       description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      titleID: "Main Bird Observational Hide 1A",
-      imagePath: 'assets/images/monke.jpeg',
-      location: LatLng(1.4463, 103.7276),
-      markerIcon: Icons.house_siding),
-  AttractionItem(
-      description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       titleID: "MB 4",
       imagePath: 'assets/images/monke.jpeg',
       location: LatLng(1.447003, 103.730061),
